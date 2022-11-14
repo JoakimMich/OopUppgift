@@ -16,7 +16,8 @@
         {
             if (items[_product].Quantity() >= _minQuantity)
             {
-                return _discount;
+                int multiplier = (int)(items[_product].Quantity() / _minQuantity);
+                return _discount * multiplier;
             } else
             {
                 return 0;

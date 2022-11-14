@@ -26,6 +26,31 @@ namespace OopUppgiftTests
         }
 
         [TestMethod]
+        public void CoffeeOffer_2()
+        {
+            Checkout checkout = new Checkout();
+            checkout.AddItem(1);
+            checkout.AddItem(4);
+            checkout.AddItem(4);
+            checkout.AddItem(4);
+            checkout.AddItem(4);
+            Assert.AreEqual(checkout.Sum(), 24.95m + 80);
+        }
+
+        [TestMethod]
+        public void CoffeeOffer_3()
+        {
+            Checkout checkout = new Checkout();
+            checkout.AddItem(1);
+            checkout.AddItem(4);
+            checkout.AddItem(4);
+            checkout.AddItem(4);
+            checkout.AddItem(4);
+            checkout.AddItem(4);
+            Assert.AreEqual(checkout.Sum(), 24.95m + 102.49m);
+        }
+
+        [TestMethod]
         public void ToothpasteOffer()
         {
             Checkout checkout = new Checkout();
@@ -33,6 +58,31 @@ namespace OopUppgiftTests
             checkout.AddItem(1);
             checkout.AddItem(1);
             Assert.AreEqual(checkout.Sum(), 24.95m*2);
+        }
+
+        [TestMethod]
+        public void ToothpasteOffer_2()
+        {
+            Checkout checkout = new Checkout();
+            checkout.AddItem(1);
+            checkout.AddItem(1);
+            checkout.AddItem(1);
+            checkout.AddItem(1);
+            checkout.AddItem(1);
+            checkout.AddItem(1);
+            Assert.AreEqual(checkout.Sum(), 24.95m * 4);
+        }
+
+        [TestMethod]
+        public void ToothpasteOffer_3()
+        {
+            Checkout checkout = new Checkout();
+            checkout.AddItem(1);
+            checkout.AddItem(1);
+            checkout.AddItem(1);
+            checkout.AddItem(1);
+            checkout.AddItem(1);
+            Assert.AreEqual(checkout.Sum(), 24.95m * 4);
         }
 
         [TestMethod]
